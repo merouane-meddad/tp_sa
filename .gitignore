@@ -4,7 +4,6 @@ __pycache__/
 .ipynb_checkpoints/
 .DS_Store
 # data and artefacts (keep the folders, not the content)
-data/raw/*
 data/processed/*
 models/*
 !**/.gitkeep
