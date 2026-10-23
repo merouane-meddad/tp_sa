@@ -1,17 +1,13 @@
 __pycache__/
-*.py[cod]
-*$py.class
-
-# Virtual environments
+*.pyc
 .venv/
-venv/
-env/
-ENV/
+.ipynb_checkpoints/
+.DS_Store
+# data and artefacts (keep the folders, not the content)
+data/raw/*
+data/processed/*
+models/*
+!**/.gitkeep
 
-# Environment and local configuration
-.env
-.env.*
-!.env.example
 
-# Logs and OS files
-*.log
+setup_repo.sh
