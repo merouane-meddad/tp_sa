@@ -20,6 +20,7 @@ Each line contains three fields:
 | `text` | string | Raw tweet text |
 
 > The loader in `src/tweet_sentiment/data.py` assumes tab-separated fields. If your files use another separator, change the `sep` argument of `load_tweets`.
+> Some training rows include an extra timestamp field; the loader ignores fields after the tweet text.
 
 ## Tasks
 
@@ -69,10 +70,16 @@ pip install -e .
 Place the data files in `data/raw/`, then run each task:
 
 ```bash
+python scripts/run_preprocessing.py  # cleaned train/test CSVs in data/processed/
 python scripts/run_task1_descriptive.py   # tables and figures in reports/
 python scripts/run_task2_models.py        # cross-validation scores, test report, saved models
 python scripts/run_task3_metadata.py      # metadata averages per polarity class
 ```
+
+The preprocessing step keeps the original `idf` and `polarity` columns, cleans
+the tweet text using the same function as the model pipelines, and writes
+`train_processed.csv` and `test_processed.csv` under `data/processed/`. Raw
+files are left unchanged.
 
 Run the tests with:
 

@@ -6,11 +6,11 @@ from .config import TRAIN_FILE, TEST_FILE
 def load_tweets(path, sep="\t"):
     """Load a tweets file with columns: idf, polarity, text.
 
-    ASSUMPTION: tab-separated. Check the real file format and adjust `sep`.
+    Extra columns, such as optional timestamps, are ignored.
     """
     df = pd.read_csv(
         path, sep=sep, header=None, names=["idf", "polarity", "text"],
-        quoting=3, encoding="utf-8", on_bad_lines="warn",
+        usecols=[0, 1, 2], quoting=3, encoding="utf-8", on_bad_lines="warn",
     )
     df["polarity"] = df["polarity"].astype(int)
     return df
