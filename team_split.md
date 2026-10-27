@@ -6,7 +6,7 @@ Each person owns one module of the repo, so people rarely edit the same file and
 
 | # | Role | Owns | Main deliverables |
 | --- | --- | --- | --- |
-| 1 | Data and infrastructure lead | `data.py`, `preprocessing.py`, `config.py`, `tests/`, git setup | Reliable loaders (separator, encoding, bad lines), text cleaning, train/validation split, repo and branch rules |
+| 1 | Data and infrastructure lead | `data.py`, `preprocessing.py`, `config.py`, git setup | Reliable loaders (separator, encoding, bad lines), text cleaning, train/validation split, repo and branch rules |
 | 2 | Task 1: descriptive analysis | `descriptive.py`, `run_task1_descriptive.py` | Class balance, length stats, top words and n-grams per class, hashtags and mentions, word clouds. Also edits the final report |
 | 3 | Task 2a: baseline models | `models.py`, `run_task2_models.py` | TF-IDF pipelines (Naive Bayes, logistic regression, SVM), cross-validation, hyperparameter search |
 | 4 | Task 2b: evaluation and advanced models | `evaluation.py` (new), `advanced_models.py` (new) | Confusion matrices, per-class F1, error analysis, one stronger model (embeddings or small transformer) for comparison |
@@ -18,7 +18,7 @@ Work runs in three phases, and person 1's loader comes first because everyone el
 
 1. **Phase 0, first day.** Person 1 pushes the working loader and `clean_text` to `main` as quickly as possible, even if rough. The others read the data, and the whole team agrees on the shared interfaces below.
 2. **Phase 1, parallel work.** Each person works on their own branch and module.
-3. **Phase 2, integration.** Person 5 hands the metadata features to persons 3 and 4, who test them as extra classifier inputs. Person 4 compares all models on the same split. Person 2 assembles the report and figures.
+3. **Phase 2, integration.** Person 5 hands the metadata features to persons 3 and 4 Person 4 compares all models on the same split. Person 2 assembles the report and figures.
 
 ## Interfaces to agree on first
 
