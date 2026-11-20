@@ -62,7 +62,11 @@ tweet-sentiment/
 │   ├── run_task2_models.py
 │   ├── run_task2_neural.py
 │   └── run_task3_metadata.py
-├── notebooks/               # descriptive_analysis.ipynb (+ its builder)
+├── notebooks/
+│   ├── descriptive_analysis.ipynb   # Task 1
+│   ├── models_analysis.ipynb        # Task 2
+│   ├── metadata_analysis.ipynb      # Task 3
+│   └── build_*_notebook.py          # regenerate the notebooks
 ├── tests/                   # pytest
 ├── models/                  # saved models (.joblib, .pt)
 └── reports/
@@ -95,6 +99,9 @@ python scripts/run_task2_neural.py        # ~10 min on CPU
 python scripts/run_task3_metadata.py      # ~6 min
 pytest
 ```
+
+The notebooks of Tasks 2 and 3 reuse the tables and models saved by the scripts, so run the
+scripts first (or set `RETRAIN = True` / `RECOMPUTE_ABLATION = True` in their first cell).
 
 ## Evaluation protocol
 

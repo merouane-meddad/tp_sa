@@ -203,3 +203,17 @@ class RNNSentimentClassifier:
         torch.save({"params": {k: v for k, v in self.__dict__.items()
                                if not k.endswith("_") and k != "tokenizer"},
                     "itos": self.vocab_.itos, "state": self.model_.state_dict()}, path)
+
+    @classmethod
+    def load(cls, path, tokenizer=None):
+        """Rebuild a classifier saved with :meth:`save` (no retraining)."""
+        ckpt = torch.load(path, map_location="cpu", weights_only=False)
+        clf = cls(tokenizer=tokenizer, **ckpt["params"])
+        clf.vocab_ = Vocabulary(tokenizer, max_len=clf.max_len)
+        clf.vocab_.itos = ckpt["itos"]
+        clf.vocab_.stoi = {w: i for i, w in enumerate(ckpt["itos"])}
+        clf.model_ = SentimentNet(len(ckpt["itos"]), clf.arch, clf.emb_dim, clf.hidden,
+                                  dropout=clf.dropout, bidirectional=clf.bidirectional)
+        clf.model_.load_state_dict(ckpt["state"])
+        clf.model_.eval()
+        return clf

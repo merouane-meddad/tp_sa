@@ -125,7 +125,7 @@ Associations avec la polarité (train, V de Cramér : 0,1 = faible, 0,3 = moyen)
   Les jurons non censurés sont bien plus fréquents (13 % des négatifs). La détection valide chaque
   forme masquée contre un lexique de jurons, ce qui écarte `A$AP`, `#rap` ou `is@the`.
 - **Ironie** : les marqueurs explicites sont quasi absents (0,04–0,13 %). Sur un échantillon de
-  12 tweets détectés, environ 4 sont vraiment ironiques. Des expressions comme *so much fun* ou
+  12 tweets détectés, 5 sont vraiment ironiques. Des expressions comme *so much fun* ou
   *I love how* sont surtout littérales. Les tweets négatifs avec émoticône positive expriment plutôt un
   sentiment mitigé ou adouci que de l'ironie (`task3_validation_samples.csv`).
 - **Apport au classifieur** (régression logistique TF-IDF + métadonnées normalisées) :
