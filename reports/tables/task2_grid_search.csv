@@ -1,0 +1,18 @@
+model,params,cv_macro_f1,cv_std
+NB (TF-IDF),"{""clf__alpha"": 0.1}",0.5919111454348336,0.005937490310369524
+NB (TF-IDF),"{""clf__alpha"": 0.3}",0.60112833501999,0.003544637746028997
+NB (TF-IDF),"{""clf__alpha"": 1.0}",0.52478215687465,0.003839851846352716
+ME / logistic regression (TF-IDF),"{""clf__C"": 0.5}",0.6353702610980215,0.004564808443455185
+ME / logistic regression (TF-IDF),"{""clf__C"": 1.0}",0.6429277362815932,0.0032830319371847296
+ME / logistic regression (TF-IDF),"{""clf__C"": 2.0}",0.6429977810192292,0.003141282750376197
+ME / logistic regression (TF-IDF),"{""clf__C"": 5.0}",0.6383593329134589,0.0032944748833904354
+linear SVM (TF-IDF),"{""clf__C"": 0.03}",0.6225522443600014,0.004773599765523865
+linear SVM (TF-IDF),"{""clf__C"": 0.1}",0.6437030311657537,0.0048870878302897415
+linear SVM (TF-IDF),"{""clf__C"": 0.3}",0.645674062167936,0.0035261278226247136
+linear SVM (TF-IDF),"{""clf__C"": 1.0}",0.6301984427967029,0.0029443409104805765
+linear SVM (Delta TF-IDF),"{""clf__C"": 0.1, ""vec__scheme"": ""pos_neg""}",0.6448314243680149,0.005832453213682777
+linear SVM (Delta TF-IDF),"{""clf__C"": 0.1, ""vec__scheme"": ""ovr""}",0.6531283975391421,0.0031637598937841937
+linear SVM (Delta TF-IDF),"{""clf__C"": 0.3, ""vec__scheme"": ""pos_neg""}",0.6401326507567353,0.005399264620046581
+linear SVM (Delta TF-IDF),"{""clf__C"": 0.3, ""vec__scheme"": ""ovr""}",0.6473766466281919,0.005384281926036288
+linear SVM (Delta TF-IDF),"{""clf__C"": 1.0, ""vec__scheme"": ""pos_neg""}",0.6242641589372313,0.002837016033911056
+linear SVM (Delta TF-IDF),"{""clf__C"": 1.0, ""vec__scheme"": ""ovr""}",0.627414003376352,0.006028898546300833

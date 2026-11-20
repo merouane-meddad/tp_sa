@@ -1,0 +1,8 @@
+,value
+rows,50306
+exact_duplicate_rows,686
+ids_seen_more_than_once,772
+ids_with_conflicting_labels,84
+texts_seen_more_than_once,777
+texts_with_conflicting_labels,87
+texts_shorter_than_3_chars,1

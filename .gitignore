@@ -10,3 +10,4 @@ models/*
 
 
 setup_repo.sh
+logs/

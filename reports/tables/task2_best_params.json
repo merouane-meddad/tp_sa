@@ -1,0 +1,9 @@
+{
+  "preprocessing": "lemma (stop words kept)",
+  "nb_alpha": 0.3,
+  "me_C": 2.0,
+  "svm_C": 0.3,
+  "delta_svm_C": 0.1,
+  "delta_scheme": "ovr",
+  "w2v_C": 0.3
+}
